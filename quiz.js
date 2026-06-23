@@ -1,13 +1,12 @@
 //Program Name: Japanese Quiz
 //Author: Lachlan
 //Date: 24/06/2026
-//Version: 1
+//Version: 2
 //This quiz is about the japapnese language.
 
 //sets the score and number of the question to 0 and the max can be changed if more questions are added.
 let score = 0;
 let questionNumber = 0;
-let questionMax = 5;
 
 //arrary, object question answer >:3
 //Making questions and answers into an object array so I can easily add or 
@@ -15,24 +14,27 @@ let questionMax = 5;
 let quizArray = [
     {
         question: "How many writing systems is in the japanese language?",
-        answer: "Three"
+        answer: "three"
     },
     {
         question: "True or false, the japanese vowels are similar to the maori vowels?",
-        answer: "True"
+        answer: "true"
     },
     {
         question: "What does kowai mean?",
-        answer: "Scary"
+        answer: "scary"
     },
     {
         question: "True or false, 'ka' makes a statement a question.",
-        answer: "True"
+        answer: "true"
     },
     {
         question: "How do you say one in japanese?",
-        answer: "Ichi"
+        answer: "ichi"
     },]
+
+//Moved questionMax to down here so we can set it to the length of the array on its own
+let questionMax = quizArray.length;
 
 // Welcomes user
 let name = prompt("Hello! What is you're name?");
@@ -41,7 +43,7 @@ alert("Welcome to the Japanese quiz " + name + "!");
 //The fuction for the question, this is the whole question that will loop.
 function question(result){
     var userAnswer = prompt(quizArray[questionNumber].question);
-    if(userAnswer == quizArray[questionNumber].answer){
+    if(userAnswer.toLowerCase() == quizArray[questionNumber].answer){
         alert("Congrats.");
         score++
         questionNumber++
@@ -57,9 +59,15 @@ for(let questionNumber = 0; questionNumber < questionMax; questionNumber++){
 var result = question(result);
 }
 //rating the quiz & giving score results, either as a % or a _/_
+//Now adapts to only let anything between 1 and 10
 var rating = prompt("What was this quiz like on a scale of 1 to 10?");
+//does the adaption to make it so the code only uses 1 to 10
+let ratingSearch = rating
+for(ratingSearch = rating; ratingSearch <= 0 || ratingSearch > 10;){
+    ratingSearch = prompt("What was this quiz like on a scale of 1 to 10?");
+}
 //giving results
 //sets the scoring to be a percentage
     var scorePercentage = score/questionMax * 100
-alert(name + " rated this quiz " + rating + " and got a score of " + scorePercentage + "%");
-println(name + " rated this quiz " + rating + " and got a score of " + scorePercentage + "%");
+alert(name + " rated this quiz " + ratingSearch + " and got a score of " + scorePercentage + "%");
+println(name + " rated this quiz " + ratingSearch + " and got a score of " + scorePercentage + "%");
