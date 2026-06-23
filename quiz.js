@@ -1,7 +1,7 @@
 //Program Name: Japanese Quiz
 //Author: Lachlan
 //Date: 24/06/2026
-//Version: 2
+//Version: 3
 //This quiz is about the japapnese language.
 
 //sets the score and number of the question to 0 and the max can be changed if more questions are added.
@@ -11,7 +11,8 @@ let questionNumber = 0;
 //arrary, object question answer >:3
 //Making questions and answers into an object array so I can easily add or 
 //remove questions and answers and loop the questions
-let quizArray = [
+//updated the array to a const as it wont change
+const quizArray = [
     {
         question: "How many writing systems is in the japanese language?",
         answer: "three"
