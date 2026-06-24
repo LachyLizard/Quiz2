@@ -74,5 +74,5 @@ for(ratingSearch = rating; ratingSearch <= 0 || ratingSearch > 10;){
 //giving results
 //sets the scoring to be a percentage
     var scorePercentage = score/questionMax * 100
-alert(name + " rated this quiz " + ratingSearch + " and got a score of " + scorePercentage + "%");
-println(name + " rated this quiz " + ratingSearch + " and got a score of " + scorePercentage + "%");
+alert(name + " rated this quiz " + ratingSearch + "/10 and got a score of " + scorePercentage + "%");
+println(name + " rated this quiz " + ratingSearch + "/10 and got a score of " + scorePercentage + "%");
