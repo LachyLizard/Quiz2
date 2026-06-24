@@ -11,7 +11,7 @@ let questionNumber = 0;
 //arrary, object question answer >:3
 //Making questions and answers into an object array so I can easily add or 
 //remove questions and answers and loop the questions
-//updated the array to a const as it wont change
+//updated the array to a const as it wont change 
 const quizArray = [
     {
         question: "How many writing systems is in the japanese language?",
@@ -26,7 +26,7 @@ const quizArray = [
         answer: "scary"
     },
     {
-        question: "True or false, 'ka' makes a statement a question.",
+        question: "True or false, 'ka' makes a statemen a question.",
         answer: "true"
     },
     {
@@ -44,7 +44,11 @@ alert("Welcome to the Japanese quiz " + name + "!");
 //The fuction for the question, this is the whole question that will loop.
 function question(result){
     var userAnswer = prompt(quizArray[questionNumber].question);
-    if(userAnswer.toLowerCase() == quizArray[questionNumber].answer){
+    if(userAnswer == null){
+        alert("Wrong, the answer was " + quizArray[questionNumber].answer);
+        questionNumber
+    }
+    else if(userAnswer.toLowerCase() == quizArray[questionNumber].answer){
         alert("Congrats.");
         score++
         questionNumber++
