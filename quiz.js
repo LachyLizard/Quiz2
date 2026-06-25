@@ -39,12 +39,10 @@ let questionMax = quizArray.length;
 
 // Welcomes user
 let name = prompt("Hello! What is you're name?");
-while(name == null){
+while(name == null || name == "null"){
     name = prompt("Hello! What is you're name?");
     }
-    if(name != null){
-        alert("Welcome to the Japanese quiz " + name + "!");
-    }
+    alert("Welcome to the Japanese quiz " + name + "!");
 //The fuction for the question, this is the whole question that will loop.
 function question(result){
     var userAnswer = prompt(quizArray[questionNumber].question);
