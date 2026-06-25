@@ -45,7 +45,7 @@ while(name == null || name == "null"){
     alert("Welcome to the Japanese quiz " + name + "!");
 //The fuction for the question, this is the whole question that will loop.
 function question(result){
-    var userAnswer = prompt(quizArray[questionNumber].question);
+    let userAnswer = prompt(quizArray[questionNumber].question);
     if(userAnswer == null){
         alert("Wrong, the answer was " + quizArray[questionNumber].answer);
         questionNumber++
@@ -63,11 +63,11 @@ function question(result){
 //Gives the user the question and loops it till question number is the same as question max
 //uses the above mentioned function as the only thing inside
 for(let questionNumber = 0; questionNumber < questionMax; questionNumber++){
-var result = question(result);
+let result = question(result);
 }
 //rating the quiz & giving score results, either as a % or a _/_
 //Now adapts to only let anything between 1 and 10
-var rating = prompt("What was this quiz like on a scale of 1 to 10?");
+let rating = prompt("What was this quiz like on a scale of 1 to 10?");
 //does the adaption to make it so the code only uses 1 to 10
 let ratingSearch = rating
 for(ratingSearch = rating; ratingSearch <= 0 || ratingSearch > 10;){
@@ -75,6 +75,6 @@ for(ratingSearch = rating; ratingSearch <= 0 || ratingSearch > 10;){
 }
 //giving results
 //sets the scoring to be a percentage
-var scorePercentage = score/questionMax * 100
+let scorePercentage = score/questionMax * 100
 alert(name + " rated this quiz " + ratingSearch + "/10 and got a score of " + scorePercentage + "%");
 println(name + " rated this quiz " + ratingSearch + "/10 and got a score of " + scorePercentage + "%");
