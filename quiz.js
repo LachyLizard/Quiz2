@@ -14,11 +14,11 @@ let questionNumber = 0;
 //updated the array to a const as it wont change
 const quizArray = [
     {
-        question: "How many writing systems is in the japanese language?",
+        question: "How many writing systems is in the japanese language?\nPlease answer as a word.",
         answer: "three"
     },
     {
-        question: "True or false, the japanese vowels are similar to the maori vowels?",
+        question: "True or false, the japanese vowels are similar to the maori vowels?\nPlease answer True or False.",
         answer: "true"
     },
     {
@@ -26,7 +26,7 @@ const quizArray = [
         answer: "scary"
     },
     {
-        question: "True or false, 'ka' makes a statement a question.",
+        question: "True or false, 'ka' makes a statement a question.\nPlease answer True or False.",
         answer: "true"
     },
     {
